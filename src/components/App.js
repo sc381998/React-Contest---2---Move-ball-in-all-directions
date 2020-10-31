@@ -40,7 +40,7 @@ const App = () => {
           },
           setBallPosition((prevValue) => {
             return {
-              left: `${x}px`,
+              left: `${x} px`,
               top: prevValue.top
             };
           })
@@ -54,7 +54,7 @@ const App = () => {
           },
           setBallPosition((prevValue) => {
             return {
-              left: `${x}px`,
+              left: `${x} px`,
               top: prevValue.top
             };
           })
@@ -69,7 +69,7 @@ const App = () => {
           setBallPosition((prevValue) => {
             return {
               left: prevValue.left,
-              top: `${y}px`
+              top: `${y} px`
             };
           })
         );
@@ -83,7 +83,7 @@ const App = () => {
           setBallPosition((prevValue) => {
             return {
               left: prevValue.left,
-              top: `${y}px`
+              top: `${y} px`
             };
           })
         );
