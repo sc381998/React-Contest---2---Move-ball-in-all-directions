@@ -38,12 +38,14 @@ const App = () => {
           (prevValue) => {
             return prevValue + 5;
           },
-          setBallPosition((prevValue) => {
-            return {
-              left: `${x} px`,
-              top: prevValue.top
-            };
-          })
+          () => {
+            setBallPosition((prevValue) => {
+              return {
+                left: `${x}px`,
+                top: prevValue.top
+              };
+            });
+          }
         );
       }
 
@@ -52,12 +54,14 @@ const App = () => {
           (prevValue) => {
             return prevValue - 5;
           },
-          setBallPosition((prevValue) => {
-            return {
-              left: `${x} px`,
-              top: prevValue.top
-            };
-          })
+          () => {
+            setBallPosition((prevValue) => {
+              return {
+                left: `${x}px`,
+                top: prevValue.top
+              };
+            });
+          }
         );
       }
 
@@ -66,12 +70,14 @@ const App = () => {
           (prevValue) => {
             return prevValue - 5;
           },
-          setBallPosition((prevValue) => {
-            return {
-              left: prevValue.left,
-              top: `${y} px`
-            };
-          })
+          () => {
+            setBallPosition((prevValue) => {
+              return {
+                left: prevValue.left,
+                top: `${y}px`
+              };
+            });
+          }
         );
       }
 
@@ -80,12 +86,14 @@ const App = () => {
           (prevValue) => {
             return prevValue + 5;
           },
-          setBallPosition((prevValue) => {
-            return {
-              left: prevValue.left,
-              top: `${y} px`
-            };
-          })
+          () => {
+            setBallPosition((prevValue) => {
+              return {
+                left: prevValue.left,
+                top: `${y}px`
+              };
+            });
+          }
         );
       }
     };
