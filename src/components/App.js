@@ -82,14 +82,9 @@ const App = () => {
       }
     };
     document.addEventListener("keydown", handleKeyPress);
-    document.addEventListener("keyup", handleKeyPress);
-    document.addEventListener("keyleft", handleKeyPress);
-    document.addEventListener("keyright", handleKeyPress);
+
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
-      document.removeEventListener("keyup", handleKeyPress);
-      document.removeEventListener("keyleft", handleKeyPress);
-      document.removeEventListener("keyright", handleKeyPress);
     };
   });
 
