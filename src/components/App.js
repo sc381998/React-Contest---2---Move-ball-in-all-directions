@@ -34,51 +34,59 @@ const App = () => {
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 39) {
-        setX((prevValue) => {
-          return prevValue + 5;
-        });
-        setBallPosition((prevValue) => {
-          return {
-            left: `${x}px`,
-            top: prevValue.top
-          };
-        });
+        setX(
+          (prevValue) => {
+            return prevValue + 5;
+          },
+          setBallPosition((prevValue) => {
+            return {
+              left: `${x}px`,
+              top: prevValue.top
+            };
+          })
+        );
       }
 
       if (event.keyCode === 37) {
-        setX((prevValue) => {
-          return prevValue - 5;
-        });
-        setBallPosition((prevValue) => {
-          return {
-            left: `${x}px`,
-            top: prevValue.top
-          };
-        });
+        setX(
+          (prevValue) => {
+            return prevValue - 5;
+          },
+          setBallPosition((prevValue) => {
+            return {
+              left: `${x}px`,
+              top: prevValue.top
+            };
+          })
+        );
       }
 
       if (event.keyCode === 38) {
-        setY((prevValue) => {
-          return prevValue - 5;
-        });
-        setBallPosition((prevValue) => {
-          return {
-            left: prevValue.left,
-            top: `${y}px`
-          };
-        });
+        setY(
+          (prevValue) => {
+            return prevValue - 5;
+          },
+          setBallPosition((prevValue) => {
+            return {
+              left: prevValue.left,
+              top: `${y}px`
+            };
+          })
+        );
       }
 
       if (event.keyCode === 40) {
-        setY((prevValue) => {
-          return prevValue + 5;
-        });
-        setBallPosition((prevValue) => {
-          return {
-            left: prevValue.left,
-            top: `${y}px`
-          };
-        });
+        setY(
+          (prevValue) => {
+            return prevValue + 5;
+          },
+          setBallPosition((prevValue) => {
+            return {
+              left: prevValue.left,
+              top: `${y}px`
+            };
+          })
+        );
       }
     };
     document.addEventListener("keydown", handleKeyPress);
