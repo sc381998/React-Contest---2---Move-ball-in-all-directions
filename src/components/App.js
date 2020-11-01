@@ -7,18 +7,16 @@ const App = () => {
   const [y, setY] = useState(0);
   const [ballPosition, setBallPosition] = useState({
     left: "0px",
-    top: "0px",
-    position: "absolute"
+    top: "0px"
   });
-  //const [style, setStyle] = useState(ballPosition);
+
   const reset = () => {
     setRenderBall(false);
     setX(0);
     setY(0);
     setBallPosition({
       left: "0px",
-      top: "0px",
-      position: "absolute"
+      top: "0px"
     });
   };
   const start = () => {
@@ -44,8 +42,7 @@ const App = () => {
     console.log(x + " " + y);
     setBallPosition({
       left: `${newx}px`,
-      top: `${newy}px`,
-      position: `absolute`
+      top: `${newy}px`
     });
   };
   useEffect(() => {
